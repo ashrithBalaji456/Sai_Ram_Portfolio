@@ -22,7 +22,7 @@ const Work = () => {
       scrollTrigger: {
         trigger: ".work-section",
         start: "top top",
-        end: () => `+=${Math.max(window.innerHeight * 1.5, getTranslateX())}`,
+        end: () => `+=${getTranslateX()}`,
         scrub: 1,
         pin: true,
         pinType: !ScrollTrigger.isTouch ? "transform" : "fixed",
