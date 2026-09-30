@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./styles/Loading.css";
 import { useLoading } from "../context/LoadingProvider";
 
@@ -8,36 +8,42 @@ const Loading = ({ percent }: { percent: number }) => {
   const { setIsLoading } = useLoading();
   const [loaded, setLoaded] = useState(false);
   const [clicked, setClicked] = useState(false);
+  const transitionedRef = useRef(false);
 
-  useEffect(() => {
-    if (percent >= 100 && !loaded) {
-      // 1. Brief pause to show 100% and seamlessly switch to "Welcome"
-      const t1 = setTimeout(() => {
-        setLoaded(true);
-      }, 250);
+  const enterPortfolio = () => {
+    if (transitionedRef.current) return;
+    transitionedRef.current = true;
+    setLoaded(true);
+    setClicked(true);
 
-      // 2. Trigger the silky smooth dissolve / reveal animation
-      const t2 = setTimeout(() => {
-        setClicked(true);
-      }, 750);
-
-      // 3. Initialize hero animations and remove the loading screen
-      const t3 = setTimeout(() => {
-        import("./utils/initialFX").then((module) => {
-          if (module.initialFX) {
-            module.initialFX();
+    setTimeout(() => {
+      import("./utils/initialFX")
+        .then((module) => {
+          try {
+            if (module.initialFX) {
+              module.initialFX();
+            }
+          } catch (err) {
+            console.warn("initialFX animation warning:", err);
+          } finally {
+            setIsLoading(false);
           }
+        })
+        .catch(() => {
           setIsLoading(false);
         });
-      }, 1250);
+    }, 450);
+  };
 
-      return () => {
-        clearTimeout(t1);
-        clearTimeout(t2);
-        clearTimeout(t3);
-      };
+  useEffect(() => {
+    if (percent >= 100 && !transitionedRef.current) {
+      setLoaded(true);
+      const timer = setTimeout(() => {
+        enterPortfolio();
+      }, 250);
+      return () => clearTimeout(timer);
     }
-  }, [percent, loaded, setIsLoading]);
+  }, [percent]);
 
   function handleMouseMove(e: React.MouseEvent<HTMLElement>) {
     const { currentTarget: target } = e;
@@ -65,7 +71,10 @@ const Loading = ({ percent }: { percent: number }) => {
           </div>
         </div>
       </div>
-      <div className={`loading-screen ${clicked ? "loading-screen-out" : ""}`}>
+      <div
+        className={`loading-screen ${clicked ? "loading-screen-out" : ""}`}
+        onClick={enterPortfolio}
+      >
         <div className="loading-marquee">
           <Marquee speed={35}>
             <span> FULL-STACK DEVELOPER</span> <span>AI SPECIALIST</span>
@@ -75,6 +84,11 @@ const Loading = ({ percent }: { percent: number }) => {
         <div
           className={`loading-wrap ${clicked ? "loading-clicked" : ""}`}
           onMouseMove={(e) => handleMouseMove(e)}
+          onClick={(e) => {
+            e.stopPropagation();
+            enterPortfolio();
+          }}
+          title="Click to enter"
         >
           <div className="loading-hover"></div>
           <div className={`loading-button ${loaded ? "loading-complete" : ""}`}>
@@ -103,19 +117,17 @@ export const setProgress = (setLoading: (value: number) => void) => {
   let isResolved = false;
   let timer: any = null;
 
-  // Fluid progressive simulation without awkward pauses
+  // Fluid progressive simulation
   const step = () => {
     if (isResolved) return;
 
     let increment = 1;
-    if (percent < 35) {
-      increment = Math.floor(Math.random() * 4) + 2; // +2 to 5
-    } else if (percent < 65) {
-      increment = Math.floor(Math.random() * 3) + 1; // +1 to 3
-    } else if (percent < 85) {
-      increment = Math.random() < 0.6 ? 1 : 0;
+    if (percent < 45) {
+      increment = Math.floor(Math.random() * 5) + 3; // +3 to 7
+    } else if (percent < 80) {
+      increment = Math.floor(Math.random() * 3) + 2; // +2 to 4
     } else if (percent < 92) {
-      increment = Math.random() < 0.35 ? 1 : 0;
+      increment = 1;
     } else {
       increment = 0;
     }
@@ -124,16 +136,24 @@ export const setProgress = (setLoading: (value: number) => void) => {
     setLoading(percent);
 
     if (percent < 92) {
-      const delay = percent < 40 ? 35 : percent < 70 ? 55 : 100;
+      const delay = percent < 45 ? 20 : percent < 80 ? 35 : 75;
       timer = setTimeout(step, delay);
     }
   };
 
-  timer = setTimeout(step, 40);
+  timer = setTimeout(step, 20);
+
+  // Safety fallback: if 3D model takes more than 2.5s (e.g. slow connection), glide directly to 100%
+  const fallbackTimer = setTimeout(() => {
+    if (!isResolved) {
+      loaded();
+    }
+  }, 2500);
 
   function clear() {
     isResolved = true;
     if (timer) clearTimeout(timer);
+    if (fallbackTimer) clearTimeout(fallbackTimer);
     setLoading(100);
   }
 
@@ -141,10 +161,11 @@ export const setProgress = (setLoading: (value: number) => void) => {
     return new Promise<number>((resolve) => {
       isResolved = true;
       if (timer) clearTimeout(timer);
+      if (fallbackTimer) clearTimeout(fallbackTimer);
 
       const startPercent = percent;
       const targetPercent = 100;
-      const duration = 280; // Silky 280ms ease-out glide to 100%
+      const duration = 200; // Snappy 200ms ease-out glide to 100%
       const startTime = performance.now();
 
       const glide = (now: number) => {

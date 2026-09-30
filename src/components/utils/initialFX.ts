@@ -7,9 +7,14 @@ gsap.registerPlugin(ScrollTrigger);
 
 export function initialFX() {
   document.body.style.overflowY = "auto";
-  smoother.paused(false);
+  if (smoother) {
+    smoother.paused(false);
+  }
   ScrollTrigger.refresh(true);
-  document.getElementsByTagName("main")[0].classList.add("main-active");
+  const mainEl = document.getElementsByTagName("main")[0];
+  if (mainEl) {
+    mainEl.classList.add("main-active");
+  }
 
   var landingText = new SplitText(
     [".landing-info h3", ".landing-intro h2", ".landing-intro h1"],
