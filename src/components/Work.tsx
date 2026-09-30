@@ -76,15 +76,47 @@ const Work = () => {
                     <li key={bIdx}>{bullet}</li>
                   ))}
                 </ul>
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="work-github-btn"
-                  data-cursor="disable"
-                >
-                  [GitHub Repository ↗]
-                </a>
+                <div className="work-link-group">
+                  {project.liveUrl && (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="work-live-btn"
+                      data-cursor="disable"
+                    >
+                      Live Demo ↗
+                    </a>
+                  )}
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="work-github-btn"
+                      data-cursor="disable"
+                    >
+                      [GitHub Repository ↗]
+                    </a>
+                  )}
+                  {!project.liveUrl && !project.github && project.link && (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={
+                        project.link.includes("github.com")
+                          ? "work-github-btn"
+                          : "work-live-btn"
+                      }
+                      data-cursor="disable"
+                    >
+                      {project.link.includes("github.com")
+                        ? "[GitHub Repository ↗]"
+                        : "Live Demo ↗"}
+                    </a>
+                  )}
+                </div>
               </div>
               <WorkImage
                 image={project.image}

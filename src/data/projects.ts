@@ -7,9 +7,28 @@ export interface Project {
   bullets: string[];
   image: string;
   link: string;
+  liveUrl?: string;
+  github?: string;
 }
 
 export const projects: Project[] = [
+  {
+    title: "TCS Joining Tracker",
+    category: "Full-Stack Development",
+    period: "Feb 2025 – Present",
+    tools:
+      "Next.js 15, React 19, TypeScript, PostgreSQL, Prisma ORM, Tailwind CSS, Zod, React Hook Form, Node.js, Git",
+    description:
+      "Full-stack recruitment and onboarding tracker with candidate authentication, HMAC-signed sessions, and Prisma PostgreSQL analytics dashboard.",
+    bullets: [
+      "Built a full-stack TCS Joining Tracker using Next.js, React, TypeScript, Prisma, and PostgreSQL to help candidates track recruitment, offer, IPA, readiness, and joining progress through a centralized dashboard.",
+      "Implemented secure candidate authentication and session management using HMAC-SHA256 signed sessions, HTTP-only cookies, access PIN hashing with bcrypt, session expiry, and protected API routes.",
+      "Designed a structured PostgreSQL data model with Prisma ORM for candidate profiles, recruitment details, offer information, joining status, IPA attempts, and location preferences, with API-driven CRUD operations and analytics.",
+    ],
+    image: `${import.meta.env.BASE_URL}images/tcs_joining_tracker.jpg`,
+    link: "https://tcs-joining-tracker.vercel.app/",
+    liveUrl: "https://tcs-joining-tracker.vercel.app/",
+  },
   {
     title: "Journal Application",
     category: "Backend & Systems",
@@ -24,6 +43,7 @@ export const projects: Project[] = [
     ],
     image: `${import.meta.env.BASE_URL}images/journal_app.jpg`,
     link: "https://github.com/Moogala-SaiRam/Journal-App",
+    github: "https://github.com/Moogala-SaiRam/Journal-App",
   },
   {
     title: "EV Energy Forecasting & Charging Optimization",
@@ -39,6 +59,8 @@ export const projects: Project[] = [
     ],
     image: `${import.meta.env.BASE_URL}images/ev_forecasting.jpg`,
     link: "https://github.com/Moogala-SaiRam/EV-Energy-Forecasting-and-Charging-Optimization",
+    github:
+      "https://github.com/Moogala-SaiRam/EV-Energy-Forecasting-and-Charging-Optimization",
   },
   {
     title: "Job Portal Application",
@@ -54,5 +76,6 @@ export const projects: Project[] = [
     ],
     image: `${import.meta.env.BASE_URL}images/job_portal.jpg`,
     link: "https://github.com/Moogala-SaiRam/JobPortal",
+    github: "https://github.com/Moogala-SaiRam/JobPortal",
   },
 ];
