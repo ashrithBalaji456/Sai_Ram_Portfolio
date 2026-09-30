@@ -304,9 +304,10 @@ h2.landing-info-h2 {
   }
   .landing-intro {
     top: 50%;
-    left: auto;
-    right: 66%;
-    transform: translate(0%, -50%);
+    left: 3%;
+    right: auto;
+    max-width: 360px;
+    transform: translateY(-50%);
   }
 
   .landing-info {
@@ -314,17 +315,18 @@ h2.landing-info-h2 {
     top: 51%;
     z-index: inherit;
     text-align: left;
-    transform: translate(0%, -50%);
-    right: auto;
-    left: 66%;
+    transform: translateY(-50%);
+    right: 3%;
+    left: auto;
   }
 }
 @media screen and (min-width: 1200px) {
   .landing-intro {
     top: 50%;
-    left: auto;
-    right: 70%;
-    transform: translate(0%, -50%);
+    left: 4%;
+    right: auto;
+    max-width: 400px;
+    transform: translateY(-50%);
   }
 
   .landing-info {
@@ -332,9 +334,9 @@ h2.landing-info-h2 {
     top: 51%;
     z-index: inherit;
     text-align: left;
-    transform: translate(0%, -50%);
-    right: auto;
-    left: 70%;
+    transform: translateY(-50%);
+    right: 4%;
+    left: auto;
   }
 }
 @media screen and (min-width: 1600px) {
