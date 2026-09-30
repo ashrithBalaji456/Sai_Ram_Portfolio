@@ -29,29 +29,28 @@ const Career = () => {
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Java Full Stack</h4>
-                <h5>Wipro Talent Next</h5>
+                <h4>B.Tech CSE (AI &amp; ML)</h4>
+                <h5>IARE Hyderabad</h5>
               </div>
               <h3>2025</h3>
             </div>
             <p>
-              Earned enterprise certification in Java Full Stack development,
-              mastering Spring Boot RESTful microservices, database schemas, and
-              modern backend architectures.
+              Undergraduate degree in AI &amp; ML with 8.52 GPA. Solved
+              317+ LeetCode problems (100 Days Badge) and built scalable
+              software and backend systems using Java and Python.
             </p>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>B.Tech CSE (AI &amp; ML)</h4>
-                <h5>IARE Hyderabad</h5>
+                <h4>Software Engineer (Digital)</h4>
+                <h5>Tata Consultancy Services</h5>
               </div>
-              <h3>NOW</h3>
+              <h3>UPCOMING</h3>
             </div>
             <p>
-              Pursuing undergraduate degree in AI &amp; ML with 8.52 GPA. Solved
-              317+ LeetCode problems (100 Days Badge) and engineering scalable
-              software and backend systems using Java and Python.
+              Selected for TCS Digital (7 LPA) through competitive national assessment,
+              preparing to engineer scalable enterprise software and high-performance backend systems.
             </p>
           </div>
         </div>
