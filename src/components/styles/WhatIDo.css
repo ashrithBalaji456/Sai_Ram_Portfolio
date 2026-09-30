@@ -37,7 +37,7 @@
   height: 500px;
   margin-left: 200px;
   position: relative;
-  display: none;
+  display: flex;
 }
 .what-content {
   width: 450px;
@@ -81,24 +81,8 @@
   opacity: 0.3;
 }
 .what-content-in {
-  opacity: 0;
-  animation: whatFlicker 0.5s 1 forwards;
-  animation-delay: 1s;
-}
-@keyframes whatFlicker {
-  0%,
-  25%,
-  35%,
-  60% {
-    opacity: 0;
-  }
-
-  30%,
-  50%,
-  40%,
-  100% {
-    opacity: 1;
-  }
+  opacity: 1;
+  transition: opacity 0.3s ease;
 }
 .what-content::before,
 .what-corner::before,
@@ -109,14 +93,7 @@
   height: 10px;
   position: absolute;
   border: 4px solid #fff;
-  opacity: 0;
-  animation: whatCorners 0.2s 1 forwards;
-  animation-delay: 0.5s;
-}
-@keyframes whatCorners {
-  100% {
-    opacity: 1;
-  }
+  opacity: 1;
 }
 .what-content::before {
   top: -2px;
@@ -174,10 +151,9 @@
   transform: translateX(-50%);
   height: 100%;
   transition: 0.5s;
-  max-width: 0%;
+  max-width: 100%;
   overflow: hidden;
   opacity: 0.8;
-  animation: whatBorders 1.2s 1 forwards;
 }
 .what-border1 svg {
   position: absolute;
@@ -192,11 +168,10 @@
   left: 0;
   transform: translateY(-50%);
   height: 100%;
-  max-height: 0%;
+  max-height: 100%;
   overflow: hidden;
   transition: 0.5s;
   opacity: 0.8;
-  animation: whatBorders 1.2s 1 forwards;
 }
 .what-border2 svg {
   height: 500px;
