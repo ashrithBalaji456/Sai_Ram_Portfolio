@@ -33,14 +33,14 @@
   align-items: center;
 }
 .work-box {
-  padding: 30px 45px;
+  padding: 22px 35px;
   display: flex;
   flex-direction: column;
-  width: 500px;
+  width: 530px;
   box-sizing: border-box;
   border-right: 1px solid #363636;
   flex-shrink: 0;
-  gap: 25px;
+  gap: 15px;
   justify-content: center;
 }
 .work-flex .work-box:nth-child(even) {
@@ -78,15 +78,39 @@
 }
 
 .work-info h4 {
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 16px;
+  font-weight: 500;
   margin: 0;
+  color: #fff;
 }
 .work-info p {
   font-weight: 200;
   color: #adacac;
   margin: 0;
   margin-top: 3px;
+}
+.work-tools {
+  color: var(--accentColor) !important;
+  font-weight: 400 !important;
+  font-size: 13.5px !important;
+  margin-top: 2px !important;
+}
+.work-bullets {
+  margin: 8px 0 0 0;
+  padding-left: 18px;
+  list-style: disc;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.work-bullets li {
+  font-size: 13px;
+  line-height: 1.45;
+  color: #cfcad8;
+  font-weight: 300;
+}
+.work-bullets li::marker {
+  color: var(--accentColor);
 }
 .work-info > p {
   width: 95%;
@@ -135,7 +159,7 @@
 }
 .work-image img {
   max-width: 100%;
-  max-height: 240px;
+  max-height: 170px;
   width: 100%;
   object-fit: cover;
   border-radius: 10px;
@@ -143,22 +167,22 @@
 }
 @media only screen and (max-height: 900px) {
   .work-image img {
-    max-height: 190px;
+    max-height: 135px;
   }
   .work-box {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    gap: 16px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    gap: 12px;
   }
   .work-section h2 {
     font-size: 45px;
-    margin-bottom: 15px;
-    margin-top: 25px;
+    margin-bottom: 12px;
+    margin-top: 20px;
   }
 }
 @media only screen and (max-width: 1400px) {
   .work-title h3 {
-    font-size: 35px;
+    font-size: 32px;
   }
   .work-info p {
     font-size: 13px;
@@ -166,26 +190,20 @@
   .work-info h4 {
     font-size: 15px;
   }
+  .work-bullets li {
+    font-size: 12px;
+    line-height: 1.4;
+  }
   .work-box {
-    width: 450px;
-    padding: 50px;
-  }
-  .work-flex {
-    margin-left: -50px;
-    padding-right: 75px;
-  }
-  .work-section h2 {
-    font-size: 50px;
-  }
-}
-@media only screen and (max-width: 1400px) {
-  .work-box {
-    width: 350px;
-    padding: 30px;
+    width: 460px;
+    padding: 18px 22px;
   }
   .work-flex {
     margin-left: -30px;
-    padding-right: 45px;
+    padding-right: 50px;
+  }
+  .work-section h2 {
+    font-size: 45px;
   }
 }
 

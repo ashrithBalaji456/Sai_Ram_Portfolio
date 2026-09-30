@@ -69,8 +69,13 @@ const Work = () => {
                     <p>{project.period}</p>
                   </div>
                 </div>
-                <h4>Tools and features</h4>
-                <p>{project.tools}</p>
+                <h4>Technologies</h4>
+                <p className="work-tools">{project.tools}</p>
+                <ul className="work-bullets">
+                  {project.bullets.map((bullet, bIdx) => (
+                    <li key={bIdx}>{bullet}</li>
+                  ))}
+                </ul>
                 <a
                   href={project.link}
                   target="_blank"
