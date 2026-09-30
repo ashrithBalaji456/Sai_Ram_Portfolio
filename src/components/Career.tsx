@@ -15,43 +15,43 @@ const Career = () => {
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Position In Company</h4>
-                <h5>Company Name</h5>
+                <h4>Intermediate (MPC)</h4>
+                <h5>Sri Chaitanya Junior College</h5>
               </div>
-              <h3>20XX</h3>
+              <h3>2022</h3>
             </div>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-              labore sit non ipsum temporibus quidem, deserunt eaque officiis
-              mollitia ratione suscipit repellat.
+              Graduated with 94.1% distinction in Mathematics, Physics, and
+              Chemistry, building rigorous mathematical and analytical
+              problem-solving foundations.
             </p>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Position In Company</h4>
-                <h5>Company Name</h5>
+                <h4>Java Full Stack</h4>
+                <h5>Wipro Talent Next</h5>
               </div>
-              <h3>20XX</h3>
+              <h3>2025</h3>
             </div>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-              labore sit non ipsum temporibus quidem, deserunt eaque officiis
-              mollitia ratione suscipit repellat.
+              Earned enterprise certification in Java Full Stack development,
+              mastering Spring Boot RESTful microservices, database schemas, and
+              modern backend architectures.
             </p>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Position In Company</h4>
-                <h5>Company Name</h5>
+                <h4>B.Tech CSE (AI &amp; ML)</h4>
+                <h5>IARE Hyderabad</h5>
               </div>
               <h3>NOW</h3>
             </div>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-              labore sit non ipsum temporibus quidem, deserunt eaque officiis
-              mollitia ratione suscipit repellat.
+              Pursuing undergraduate degree in AI &amp; ML with 8.52 GPA. Solved
+              317+ LeetCode problems (100 Days Badge) and engineering scalable
+              full-stack and ML applications.
             </p>
           </div>
         </div>
