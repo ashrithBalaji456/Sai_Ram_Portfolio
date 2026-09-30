@@ -102,12 +102,22 @@ const Scene = () => {
         onMouseMove(event);
       });
       const landingDiv = document.getElementById("landingDiv");
-      if (landingDiv) {
-        landingDiv.addEventListener("touchstart", onTouchStart);
-        landingDiv.addEventListener("touchend", onTouchEnd);
+      let isVisible = true;
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            isVisible = entry.isIntersecting;
+          });
+        },
+        { threshold: 0.05 }
+      );
+      if (canvasDiv.current) {
+        observer.observe(canvasDiv.current);
       }
+
       const animate = () => {
         requestAnimationFrame(animate);
+        if (!isVisible) return;
         if (headBone) {
           handleHeadRotation(
             headBone,
@@ -127,6 +137,7 @@ const Scene = () => {
       };
       animate();
       return () => {
+        observer.disconnect();
         clearTimeout(debounce);
         scene.clear();
         renderer.dispose();

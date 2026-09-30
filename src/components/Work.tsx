@@ -23,7 +23,7 @@ const Work = () => {
         trigger: ".work-section",
         start: "top top",
         end: () => `+=${getTranslateX()}`,
-        scrub: 1,
+        scrub: true,
         pin: true,
         pinType: !ScrollTrigger.isTouch ? "transform" : "fixed",
         anticipatePin: 1,

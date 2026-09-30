@@ -247,6 +247,7 @@ const TechStack = () => {
       <div className="techstack-canvas-wrap">
         <Canvas
           shadows={false}
+          frameloop={isActive ? "always" : "never"}
           gl={{ alpha: true, antialias: true, powerPreference: "high-performance" }}
           camera={{ position: [0, 0, 18], fov: 32, near: 1, far: 50 }}
           onCreated={(state) => (state.gl.toneMappingExposure = 1.2)}
