@@ -83,7 +83,7 @@ const SocialIcons = () => {
         </span>
         <span>
           <a
-            href="https://github.com/Moogala-SaiRam"
+            href="https://leetcode.com/u/Sairam_mugala/"
             target="_blank"
             rel="noopener noreferrer"
             title="LeetCode Profile"
@@ -102,7 +102,7 @@ const SocialIcons = () => {
       </div>
       <a
         className="resume-button"
-        href="/Sai_Ram_Resume.pdf"
+        href={`${import.meta.env.BASE_URL}Sai_Ram_Resume.pdf`}
         target="_blank"
         rel="noopener noreferrer"
         download="Moogala_Sairam_Resume.pdf"

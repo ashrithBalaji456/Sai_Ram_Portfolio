@@ -49,7 +49,7 @@ const Contact = () => {
               LeetCode <MdArrowOutward />
             </a>
             <a
-              href="/Sai_Ram_Resume.pdf"
+              href={`${import.meta.env.BASE_URL}Sai_Ram_Resume.pdf`}
               target="_blank"
               data-cursor="disable"
               className="contact-social"

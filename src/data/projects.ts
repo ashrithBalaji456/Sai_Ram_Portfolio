@@ -22,7 +22,7 @@ export const projects: Project[] = [
       "Implemented role-based access control and session management to ensure secure authentication and authorization.",
       "Built and tested modular CRUD APIs backed by MongoDB, with Redis used for caching, and documented endpoints using Swagger.",
     ],
-    image: "/images/journal_app.jpg",
+    image: `${import.meta.env.BASE_URL}images/journal_app.jpg`,
     link: "https://github.com/Moogala-SaiRam/Journal-App",
   },
   {
@@ -37,7 +37,7 @@ export const projects: Project[] = [
       "Deployed the trained model as a RESTful prediction service using FastAPI to enable real-time inference.",
       "Validated prediction accuracy and optimized model performance through iterative testing and evaluation.",
     ],
-    image: "/images/ev_forecasting.jpg",
+    image: `${import.meta.env.BASE_URL}images/ev_forecasting.jpg`,
     link: "https://github.com/Moogala-SaiRam/EV-Energy-Forecasting-and-Charging-Optimization",
   },
   {
@@ -52,7 +52,7 @@ export const projects: Project[] = [
       "Implemented CRUD operations, search functionality, and REST APIs to efficiently retrieve and manage job listings.",
       "Designed relational database schemas using PostgreSQL and integrated frontend components with backend services.",
     ],
-    image: "/images/job_portal.jpg",
+    image: `${import.meta.env.BASE_URL}images/job_portal.jpg`,
     link: "https://github.com/Moogala-SaiRam/JobPortal",
   },
 ];
