@@ -9,6 +9,7 @@ import SocialIcons from "./SocialIcons";
 import WhatIDo from "./WhatIDo";
 import Work from "./Work";
 import Certifications from "./Certifications";
+import CodingProfiles from "./CodingProfiles";
 import TechStack from "./TechStack";
 import setSplitText from "./utils/splitText";
 
@@ -44,6 +45,7 @@ const MainContainer = ({ children }: PropsWithChildren) => {
             <Career />
             <Work />
             <Certifications />
+            <CodingProfiles />
             {isDesktopView && <TechStack />}
             <Contact />
           </div>

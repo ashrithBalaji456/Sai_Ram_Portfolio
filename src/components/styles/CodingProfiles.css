@@ -1,0 +1,223 @@
+.coding-profiles-section {
+  width: 100%;
+  max-width: var(--cMaxWidth, 1400px);
+  margin: 100px auto 140px auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 20;
+}
+
+.coding-profiles-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.coding-profiles-header h2 {
+  font-size: 55px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+  color: #fff;
+  background: linear-gradient(0deg, #7f40ff, #ffffff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.coding-profiles-header h2 span {
+  font-family: "Geist", sans-serif;
+  font-weight: 300;
+}
+
+.coding-subtitle {
+  font-size: 16px;
+  color: #a09cb0;
+  margin-top: 10px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.coding-summary-bar {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto 45px auto;
+  flex-wrap: wrap;
+}
+
+.summary-pill {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50px;
+  padding: 10px 22px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: #d1cdd9;
+  backdrop-filter: blur(10px);
+}
+
+.summary-pill strong {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.summary-pill .pill-accent {
+  color: var(--accentColor);
+}
+
+.coding-profiles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.coding-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 30px 28px;
+  backdrop-filter: blur(14px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.coding-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--card-accent, var(--accentColor));
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.coding-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--card-border-hover, rgba(194, 164, 255, 0.35));
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4), 0 0 25px var(--card-glow, rgba(127, 64, 255, 0.15));
+}
+
+.coding-card:hover::before {
+  opacity: 1;
+}
+
+.coding-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.platform-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.platform-icon {
+  font-size: 24px;
+}
+
+.highlight-badge {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--card-accent, #fff);
+}
+
+.coding-stats-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.coding-stat-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14.5px;
+  color: #cfcad6;
+  font-weight: 400;
+}
+
+.coding-stat-item svg {
+  color: var(--card-accent, var(--accentColor));
+  flex-shrink: 0;
+}
+
+.coding-stat-item strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+.coding-action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: all 0.25s ease;
+  box-sizing: border-box;
+}
+
+.coding-card:hover .coding-action-btn {
+  background: linear-gradient(135deg, rgba(127, 64, 255, 0.25), rgba(194, 164, 255, 0.35));
+  border-color: var(--card-accent, var(--accentColor));
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 900px) {
+  .coding-profiles-section {
+    margin: 60px auto 80px auto;
+    padding: 0 20px;
+  }
+  .coding-profiles-header h2 {
+    font-size: 38px;
+  }
+  .coding-summary-bar {
+    gap: 12px;
+    margin-bottom: 30px;
+  }
+  .summary-pill {
+    width: 100%;
+    justify-content: center;
+  }
+  .coding-profiles-grid {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+  .coding-card {
+    padding: 24px 20px;
+  }
+}

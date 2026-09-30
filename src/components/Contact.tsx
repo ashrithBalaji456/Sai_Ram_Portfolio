@@ -40,8 +40,9 @@ const Contact = () => {
               Linkedin <MdArrowOutward />
             </a>
             <a
-              href="https://github.com/Moogala-SaiRam"
+              href="https://leetcode.com/u/Sairam_mugala/"
               target="_blank"
+              rel="noreferrer"
               data-cursor="disable"
               className="contact-social"
             >
