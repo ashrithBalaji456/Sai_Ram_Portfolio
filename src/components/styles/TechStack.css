@@ -70,8 +70,8 @@
   border-radius: 14px;
   padding: 16px 20px;
   backdrop-filter: blur(12px);
-  flex: 1 1 300px;
-  max-width: 360px;
+  flex: 1 1 240px;
+  max-width: 275px;
   transition: border-color 0.3s ease, transform 0.3s ease;
 }
 

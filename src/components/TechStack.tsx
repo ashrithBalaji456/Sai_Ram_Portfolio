@@ -47,17 +47,6 @@ function createSkillTexture(name: string, color1: string, color2: string): THREE
   return texture;
 }
 
-const textureLoader = new THREE.TextureLoader();
-const imageUrls = [
-  "/images/react2.webp",
-  "/images/typescript.webp",
-  "/images/node2.webp",
-  "/images/express.webp",
-  "/images/mongo.webp",
-  "/images/mysql.webp",
-  "/images/javascript.webp",
-];
-
 const sphereGeometry = new THREE.SphereGeometry(1, 24, 24);
 
 const spheres = [...Array(22)].map(() => ({
@@ -179,57 +168,50 @@ const TechStack = () => {
   }, []);
 
   const materials = useMemo(() => {
-    // Loaded image textures
-    const imgMats = imageUrls.map((url) => {
-      const tex = textureLoader.load(url);
-      return new THREE.MeshPhysicalMaterial({
-        map: tex,
-        emissive: "#ffffff",
-        emissiveMap: tex,
-        emissiveIntensity: 0.2,
-        metalness: 0.4,
-        roughness: 0.5,
-        clearcoat: 0.3,
-      });
-    });
-
-    // Custom branded textures for Sairam's core skills
+    // Custom branded textures for Sairam's exact technical skills
     const customSkills = [
       { name: "JAVA", c1: "#e76f51", c2: "#264653" },
-      { name: "SPRING", c1: "#52b788", c2: "#1b4332" },
-      { name: "PYTHON", c1: "#457b9d", c2: "#1d3557" },
-      { name: "FASTAPI", c1: "#2a9d8f", c2: "#1d3557" },
-      { name: "DOCKER", c1: "#0077b6", c2: "#03045e" },
-      { name: "AI / ML", c1: "#b5179e", c2: "#3a0ca3" },
+      { name: "PYTHON", c1: "#3a86ff", c2: "#03045e" },
+      { name: "SPRING BOOT", c1: "#52b788", c2: "#1b4332" },
+      { name: "REST APIs", c1: "#00b4d8", c2: "#0077b6" },
+      { name: "MYSQL", c1: "#0077b6", c2: "#023e8a" },
+      { name: "POSTGRESQL", c1: "#4361ee", c2: "#1e1b4b" },
+      { name: "GIT", c1: "#f72585", c2: "#7209b7" },
+      { name: "POSTMAN", c1: "#f77f00", c2: "#d62828" },
+      { name: "INTELLIJ", c1: "#7209b7", c2: "#3a0ca3" },
+      { name: "ECLIPSE", c1: "#480ca8", c2: "#240046" },
+      { name: "SWAGGER", c1: "#8ac926", c2: "#38b000" },
     ];
 
-    const customMats = customSkills.map((s) => {
+    return customSkills.map((s) => {
       const tex = createSkillTexture(s.name, s.c1, s.c2);
       return new THREE.MeshPhysicalMaterial({
         map: tex,
         emissive: s.c1,
-        emissiveIntensity: 0.15,
+        emissiveIntensity: 0.18,
         metalness: 0.5,
         roughness: 0.4,
         clearcoat: 0.4,
       });
     });
-
-    return [...imgMats, ...customMats];
   }, []);
 
   const techCategories = [
     {
-      category: "Backend & Systems",
-      skills: ["Java", "Spring Boot", "REST APIs", "PostgreSQL", "MySQL", "MongoDB", "Redis", "Docker"],
+      category: "Programming Languages",
+      skills: ["Java", "Python"],
     },
     {
-      category: "AI & Machine Learning",
-      skills: ["Python", "FastAPI", "TensorFlow", "XGBoost", "Scikit-Learn", "Deep Learning", "Pandas"],
+      category: "Backend Development",
+      skills: ["Spring Boot", "REST APIs"],
     },
     {
-      category: "Frontend & Engineering",
-      skills: ["React", "TypeScript", "JavaScript", "HTML5 / CSS3", "Git", "Postman", "Swagger"],
+      category: "Databases",
+      skills: ["MySQL", "PostgreSQL"],
+    },
+    {
+      category: "Tools & IDEs",
+      skills: ["Git", "Postman", "IntelliJ IDEA", "Eclipse", "Swagger"],
     },
   ];
 

@@ -51,7 +51,7 @@ const Career = () => {
             <p>
               Pursuing undergraduate degree in AI &amp; ML with 8.52 GPA. Solved
               317+ LeetCode problems (100 Days Badge) and engineering scalable
-              full-stack and ML applications.
+              software and backend systems using Java and Python.
             </p>
           </div>
         </div>

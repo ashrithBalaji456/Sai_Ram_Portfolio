@@ -87,25 +87,20 @@ const WhatIDo = () => {
             <div className="what-corner"></div>
 
             <div className="what-content-in">
-              <h3>DEVELOP</h3>
-              <h4>Full-Stack &amp; Backend</h4>
+              <h3>BACKEND</h3>
+              <h4>Java &amp; Spring Boot Development</h4>
               <p>
-                Architecting scalable enterprise applications with Spring Boot
-                microservices, robust RESTful APIs, secure session management,
-                and interactive React user interfaces.
+                Architecting enterprise backend services with Spring Boot,
+                implementing modular RESTful APIs, securing business logic, and
+                designing relational database architectures with MySQL and PostgreSQL.
               </p>
               <h5>Skillset &amp; tools</h5>
               <div className="what-content-flex">
                 <div className="what-tags">Java</div>
                 <div className="what-tags">Spring Boot</div>
-                <div className="what-tags">React</div>
-                <div className="what-tags">TypeScript</div>
-                <div className="what-tags">JavaScript</div>
                 <div className="what-tags">REST APIs</div>
-                <div className="what-tags">PostgreSQL</div>
                 <div className="what-tags">MySQL</div>
-                <div className="what-tags">MongoDB</div>
-                <div className="what-tags">Redis</div>
+                <div className="what-tags">PostgreSQL</div>
                 <div className="what-tags">Git</div>
               </div>
               <div className="what-arrow"></div>
@@ -130,25 +125,22 @@ const WhatIDo = () => {
             </div>
             <div className="what-corner"></div>
             <div className="what-content-in">
-              <h3>AI &amp; ML</h3>
-              <h4>Machine Learning &amp; Analytics</h4>
+              <h3>SYSTEMS</h3>
+              <h4>APIs, Scripting &amp; Tooling</h4>
               <p>
-                Designing predictive ML architectures, time-series forecasting,
-                hybrid GRU-XGBoost models, and deploying low-latency inference
-                services using FastAPI and TensorFlow.
+                Building automation scripts with Python, designing and testing
+                RESTful endpoints with Postman and Swagger, and managing clean development
+                workflows using IntelliJ IDEA, Eclipse, and Git.
               </p>
               <h5>Skillset &amp; tools</h5>
               <div className="what-content-flex">
                 <div className="what-tags">Python</div>
-                <div className="what-tags">FastAPI</div>
-                <div className="what-tags">TensorFlow</div>
-                <div className="what-tags">XGBoost</div>
-                <div className="what-tags">Deep Learning</div>
-                <div className="what-tags">Scikit-Learn</div>
-                <div className="what-tags">Pandas / NumPy</div>
+                <div className="what-tags">REST APIs</div>
                 <div className="what-tags">Postman</div>
                 <div className="what-tags">Swagger</div>
-                <div className="what-tags">Data Structures</div>
+                <div className="what-tags">IntelliJ IDEA</div>
+                <div className="what-tags">Eclipse</div>
+                <div className="what-tags">Git</div>
               </div>
               <div className="what-arrow"></div>
             </div>

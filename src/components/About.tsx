@@ -6,11 +6,10 @@ const About = () => {
       <div className="about-me">
         <h3 className="title">About Me</h3>
         <p className="para">
-          Passionate Full-Stack &amp; Backend Developer specializing in Java,
-          Spring Boot, React, and Machine Learning. B.Tech student in Artificial
-          Intelligence and Machine Learning at IARE Hyderabad with strong
-          algorithmic foundations, building scalable web architectures and
-          intelligent data-driven systems.
+          Passionate Software Engineer specializing in Java, Python, and Spring Boot
+          backend development. Focused on designing robust RESTful APIs, scalable
+          relational database architectures with MySQL and PostgreSQL, and efficient engineering
+          workflows with Git, Postman, and IntelliJ IDEA.
         </p>
       </div>
     </div>
