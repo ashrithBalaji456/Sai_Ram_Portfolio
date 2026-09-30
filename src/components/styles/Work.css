@@ -256,3 +256,29 @@
   border-color: #fff;
 }
 
+@media only screen and (max-width: 600px) {
+  .work-box {
+    width: 86vw !important;
+    max-width: 360px !important;
+    padding: 16px 18px !important;
+    gap: 10px !important;
+  }
+  .work-title h3 {
+    font-size: 26px !important;
+  }
+  .work-title h4 {
+    font-size: 15px !important;
+  }
+  .work-bullets {
+    padding-left: 14px !important;
+    gap: 4px !important;
+  }
+  .work-bullets li {
+    font-size: 11px !important;
+    line-height: 1.35 !important;
+  }
+  .work-image img {
+    max-height: 120px !important;
+  }
+}
+
