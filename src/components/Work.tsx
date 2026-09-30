@@ -66,11 +66,20 @@ const Work = () => {
 
                   <div>
                     <h4>{project.title}</h4>
-                    <p>{project.category}</p>
+                    <p>{project.period}</p>
                   </div>
                 </div>
                 <h4>Tools and features</h4>
                 <p>{project.tools}</p>
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="work-github-btn"
+                  data-cursor="disable"
+                >
+                  [GitHub Repository ↗]
+                </a>
               </div>
               <WorkImage
                 image={project.image}
