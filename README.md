@@ -1,7 +1,9 @@
 <!-- ===================== ANIMATED HEADER ===================== -->
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=240&section=header&text=Moogala%20Sairam&fontSize=56&fontColor=ffffff&animation=fadeIn&fontAlignY=36&desc=Software%20Engineer%20%26%20Backend%20Developer&descAlignY=58&descSize=20" alt="Moogala Sairam – Portfolio header" width="100%"/>
+<a href="https://sai-ram-portfolio.vercel.app/">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=800&size=44&duration=2500&pause=1200&color=36BCF7&center=true&vCenter=true&width=800&height=90&lines=Moogala+Sairam;Software+Engineer;Backend+Developer" alt="Moogala Sairam – Software Engineer and Backend Developer" />
+</a>
 
 <a href="https://github.com/ashrithBalaji456/Sai_Ram_Portfolio">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3200&pause=900&color=36BCF7&center=true&vCenter=true&width=700&lines=Welcome+to+my+portfolio+%F0%9F%9A%80;Java+%E2%80%A2+Python+%E2%80%A2+Spring+Boot;REST+APIs+%E2%80%A2+Relational+Databases;Built+with+React+%2B+TypeScript+%2B+GSAP+%2B+Three.js" alt="Animated typing intro" />
@@ -55,21 +57,37 @@ This repository contains the source code of the personal portfolio website of **
 The site is a front-end showcase built with **React + TypeScript**, animated with **GSAP**, and rendered with **Three.js / React Three Fiber (WebGL)** for interactive 3D visuals. It is bundled by **Vite** and hosted on **Vercel**.
 
 ```mermaid
-mindmap
-  root((Moogala Sairam))
-    Backend
-      Java
-      Python
-      Spring Boot
-      REST APIs
-    Data
-      Relational Databases
-    This Portfolio
-      React and TypeScript
-      GSAP animation
-      Three.js and WebGL
-      Vite build
-      Vercel hosting
+flowchart LR
+    ME(("Moogala<br/>Sairam"))
+
+    ME --> BE["Backend"]
+    ME --> DA["Data"]
+    ME --> PF["This Portfolio"]
+
+    BE --> J["Java"]
+    BE --> P["Python"]
+    BE --> SB["Spring Boot"]
+    BE --> RA["REST APIs"]
+
+    DA --> RD["Relational Databases"]
+
+    PF --> RT["React + TypeScript"]
+    PF --> GS["GSAP animation"]
+    PF --> TJ["Three.js + WebGL"]
+    PF --> VT["Vite build"]
+    PF --> VC["Vercel hosting"]
+
+    classDef root fill:#1f6feb,stroke:#58a6ff,stroke-width:2px,color:#ffffff
+    classDef backend fill:#8957e5,stroke:#bc8cff,stroke-width:1px,color:#ffffff
+    classDef data fill:#bf4b8a,stroke:#ff7eb6,stroke-width:1px,color:#ffffff
+    classDef front fill:#238636,stroke:#56d364,stroke-width:1px,color:#ffffff
+
+    class ME root
+    class BE,J,P,SB,RA backend
+    class DA,RD data
+    class PF,RT,GS,TJ,VT,VC front
+
+    linkStyle default stroke:#8b949e,stroke-width:2px
 ```
 
 ---
@@ -377,6 +395,6 @@ flowchart LR
 
 **⭐ If you found this useful for learning, consider starring the repo!**
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=140&section=footer&animation=fadeIn" alt="Footer wave" width="100%"/>
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=3000&pause=1000&color=8B949E&center=true&vCenter=true&width=600&height=50&lines=Thanks+for+visiting+%F0%9F%91%8B;Built+with+React+%2B+TypeScript+%2B+GSAP+%2B+Three.js" alt="Thanks for visiting" />
 
 </div>
